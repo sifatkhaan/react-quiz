@@ -2,9 +2,10 @@ import React from 'react'
 import image from "../assets/images/3.jpg";
 import classes from "../styles/Video.module.css";
 import Image from 'next/image';
+import Link from 'next/link';
 export default function Video() {
   return (
-    <a href="quiz.html">
+    <Link href="/quiz">
     <div className={classes.video}>
       {/* <img src={image} alt="Video Title" /> */}
       <Image src={image} alt='Video Title'/>
@@ -14,6 +15,6 @@ export default function Video() {
         <p>Score : Not taken yet</p>
       </div>
     </div>
-  </a>
+  </Link>
   )
 }
