@@ -32,6 +32,7 @@ export default function useVideoList(page) {
     }
     fetchVideos();
   }, [page]);
+
   return {
     loading,
     error,
