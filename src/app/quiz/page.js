@@ -1,8 +1,10 @@
+'use client';
 import Answers from "@/components/Answers";
 import MiniPlayer from "@/components/MiniPlayer";
+import PrivateRoute from "@/hoc/PrivateRoute";
 import ProgressBar from "@/components/ProgressBar";
 
-export default function Quiz() {
+const Quiz =()=> {
   return (
     <>
       <h1 className="font-bold text-3xl">Pick three of your favorite Star Wars Flims</h1>
@@ -13,3 +15,4 @@ export default function Quiz() {
     </>
   );
 }
+export default PrivateRoute(Quiz)

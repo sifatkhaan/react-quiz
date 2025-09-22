@@ -1,9 +1,10 @@
-
+"use client";
 import Illustration from "@/components/Illustration";
 import SignupForm from "@/components/SignupForm";
+import PublicRoute from "@/hoc/PublicRoute";
 import React from "react";
 
-export default function SignUp() {
+function SignUp() {
   return (
     <>
       <h1>Create an account</h1>
@@ -14,3 +15,4 @@ export default function SignUp() {
     </>
   );
 }
+export default PublicRoute(SignUp);

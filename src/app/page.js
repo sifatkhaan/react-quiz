@@ -1,3 +1,4 @@
+'use client'
 import Videos from "@/components/Videos";
 import Image from "next/image";
 

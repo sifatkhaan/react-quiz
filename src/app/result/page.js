@@ -1,8 +1,10 @@
+'use client'
 import Analysis from '@/components/Analysis';
 import Summary from '@/components/Summary';
+import PrivateRoute from '@/hoc/PrivateRoute';
 import React from 'react'
 
-export default function Result() {
+ function Result() {
     return (
       <>
         <Summary />
@@ -10,3 +12,4 @@ export default function Result() {
       </>
     );
   }
+export default PrivateRoute(Result)

@@ -7,7 +7,8 @@ const app = initializeApp({
   projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
   storageBucket:process.env.NEXT_PUBLIC_STORAGE_BUCKET,
   messagingSenderId: process.env.NEXT_PUBLIC_MESSEGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_APP_ID
+  appId: process.env.NEXT_PUBLIC_APP_ID,
+  databaseURL: process.env.NEXT_PUBLIC_DATABASE_URL
 });
 
 export default app;
