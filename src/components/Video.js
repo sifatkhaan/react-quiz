@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Video({id, title, noq}) {
   console.log(id, title, 'id')
   return (
-    <Link href="/quiz">
+    <Link href={`/quiz/${id}`}>
     <div className={classes.video}>
       {/* <img src={image} alt="Video Title" /> */}
       <Image src={`http://img.youtube.com/vi/${id}/maxresdefault.jpg`} alt={title} width={200} height={200}/>
