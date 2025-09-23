@@ -21,9 +21,7 @@ export default function useQuestionsList(videoId) {
       const quizRef = ref(db, "quiz/" + videoId + "/questions");
       const quizQuery = query(
         quizRef,
-        orderByKey(),
-        startAt("" + page),
-        limitToFirst(8)
+        orderByKey()
       );
       try {
         setError(false);
