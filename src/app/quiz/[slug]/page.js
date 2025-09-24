@@ -11,6 +11,7 @@ import { getDatabase, ref, set } from "firebase/database";
 import { useRouter } from "next/navigation";
 
 const initialState = null;
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "questions":
@@ -73,10 +74,7 @@ const Quiz = ({ params }) => {
     await set(resultRef, {
       [slug]: qna,
     });
-    router.push({
-      pathname: `result/${slug}`,
-      state: { qna },
-    });
+    router.push(`/result/${slug}`);
   };
 
   const percentage =
@@ -91,6 +89,7 @@ const Quiz = ({ params }) => {
           <h1 className="font-bold text-3xl">{qna[currentQuestion].title}</h1>
           <h4>Question can have multiple answers</h4>
           <Answers
+            input
             options={qna[currentQuestion].options}
             handleChange={handleAnswerChange}
           />
